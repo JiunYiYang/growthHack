@@ -1,0 +1,329 @@
+{% load staticfiles %}
+{% load essays_tags %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>行銷技術控 | Marketing with Data & Web Tech</title>
+<meta name="google-site-verification" content="Ja0wk-_nuipAVZHdFOmbu-QYGFCSL7Q2VzOuwNH-kO8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Growth Hack, Data, Marketing Tech, User Acqusition, User Activate, User Retention, Referral, Revenue, 增長駭客, 行銷, 技術, 產品增長, 資料分析, 成長駭客, 行銷自動化, 程序化, 廣告, 數位廣告, 用戶增長, 用戶留存, 推荐, 轉換營收" />
+<meta property="og:url"           content="https://growthackit.pythonanywhere.com/aboutme.html" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="關於我 About Me－行銷技術控 | Marketing with Data & Web Tech" />
+<meta property="og:description"   content="這是一個經過競爭優勢取捨後的結果..." />
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link rel="icon" type="image/png" sizes="96x96" href="{% static 'images/favicon-96x96.png' %}">
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/lightbox.css' %}" rel="stylesheet"> 
+<link href="{% static 'css/animate1.min.css' %}" rel="stylesheet"> 
+<link href="{% static 'css/main.css' %}" rel="stylesheet">
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />	
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- animation-effect -->
+<link href="{% static 'css/animate.min.css' %}" rel="stylesheet"> 
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/lightbox.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>   
+<script>
+ new WOW().init();
+</script>
+<!-- //animation-effect -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5611170227781133",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.6";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<header id="header" style="transition-duration: 0.5s"></header>
+<div class="header" id="ban" style="position: fixed; overflow: hidden; top: 0px; width: 100%; z-index: 2">
+		<div class="container">
+			<div class="head-left fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+				
+			</div>
+			<div class="header_right fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                        <nav class="link-effect-7" id="link-effect-7">
+                            {% get_categories as category_list %}
+                                <ul class="nav navbar-nav">
+                                    <li class="active act"><a style="font-size: 14px" href="/">Home</a></li>
+                                    {% for category in category_list %}
+                                    <li>
+                                        <a href="{% url 'essays:category' category.pk %}#content">{{ category.name }}</a>
+                                    </li>
+                                    {% endfor %}
+                                    <li><a style="font-size: 14px" href="/aboutme.html">About</a></li>
+                                    <li><a style="font-size: 14px" href="/portfolio.html">Portfolio</a></li>
+                                </ul>
+                        </nav>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+			</div>
+			<div class="nav navbar-nav navbar-right social-icons fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+					<ul>
+						<li><a href="https://www.facebook.com/Abao.JiunYiYang" target="_blank"> </a></li>
+						<li><a href="https://www.linkedin.com/in/jiunyiyang/" class="in" target="_blank"> </a></li>
+					</ul>
+				</div>
+			<div class="clearfix"> </div>	
+		</div>
+	</div>
+	<!--start-main-->
+	<div class="header-bottom" style="margin-bottom: 20px">
+		<div class="container">
+			<div class="logo fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s" style="position: relative">
+				<a href="/"><img src="https://vectr.com/abaoyang/welcome.png?width=570&height=600&select=dq2YncSGN" alt="行銷 技術 控 Marketing Tech"></a>
+				<div class="titleGroup" style="display: inline-block; position: absolute">
+					<h1 style="z-index: 0"><a href="/">行銷技術控</a></h1>
+					<p class="divider" style="z-index: 0">——————</p><p class="subTitle" style="z-index: 0"> Marketing with Data & Web Tech </p><p class="divider" style="z-index: 0">——————</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <!-- Page Container -->
+    <div class="w3-content w3-margin-top" style="max-width:1280px;">
+
+    <!-- The Grid -->
+    <div class="w3-row-padding">
+    
+        <!-- Left Column -->
+        <div class="w3-third">
+        
+        <div class="w3-white w3-text-grey w3-card-4 padding wow fadeIn" style="padding: 10px 0px" data-wow-duration="1000ms" data-wow-delay="300ms">
+            <div class="w3-display-container">
+            <img src="http://res.cloudinary.com/abaoyangresources/image/upload/v1513189014/15232227_1436384953053151_6649309224858306258_n_gr4xmn.jpg" style="width:100%" alt="Avatar">
+            <div class="w3-display-bottomleft w3-container w3-text-black">
+                <h2 style="color: #f3f3f3">Abao Yang (楊鈞宜)</h2>
+            </div>
+            </div>
+            <div class="w3-container" style="margin-top: 10px">
+            <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>From Marketer to Developer&Designer</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>Taipei, Taiwan</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>jiunyi.yang.abao@gmail.com</p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>+886 989 960 615</p>
+            <hr>
+
+            <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+            <p><i class="fa fa-html5"></i><i class="fa fa-css3"></i>　html5 / css3</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:90%">90%</div>
+            </div>
+            <p><i class="fa fa-code"></i>　jQuery</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:70%">
+                <div class="w3-center w3-text-white">70%</div>
+                </div>
+            </div>
+            <p><i class="fa fa-laptop"></i>　django (python)</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:60%">60%</div>
+            </div>
+            <p><i class="fa fa-git"></i>　git</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:55%">55%</div>
+            </div>
+            <p><i class="fa fa-server"></i>　ruby on rails</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:45%">45%</div>
+            </div>
+            <p><i class="fa fa-paint-brush"></i>　Photoshop / Illustrator</p>
+            <div class="w3-light-grey w3-round-xlarge w3-small">
+                <div class="w3-container w3-center w3-round-xlarge w3-teal" style="width:99%">99%</div>
+            </div>
+            <br>
+
+            <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages & Certifications</b></p>
+            <p style="margin: 25px 0px 3px 3px"><i class="fa fa-certificate"></i>　English (TOEIC 910): Work Proficiency</p>
+                <a href="{% static 'images/toeic.jpg' %}" data-lightbox="example-set"><img src="{% static 'images/toeic.jpg' %}" alt="" width="100%"></a>
+            <p style="margin: 25px 0px 3px 3px"><i class="fa fa-certificate"></i>　Google Adwords Search Certification</p>
+                <a href="{% static 'images/Adwords_0822.jpg' %}" data-lightbox="example-set"><img src="{% static 'images/Adwords_0822.jpg' %}" alt="" width="100%"></a>
+            <p style="margin: 25px 0px 3px 3px"><i class="fa fa-certificate"></i>　Google Analytics Certification</p>
+                <a href="{% static 'images/GA_certificate_0829.jpg' %}" data-lightbox="example-set"><img src="{% static 'images/GA_certificate_0829.jpg' %}" alt="" width="100%"></a>
+            <br>
+            </div>
+        </div><br>
+
+        <!-- End Left Column -->
+        </div>
+
+        <!-- Right Column -->
+        <div class="w3-twothird">
+        <div class="w3-container w3-card-2 w3-white w3-margin-bottom padding wow fadeIn" style="padding: 10px 10px" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <h2 class="w3-text-grey w3-padding-16" style="font-size: 30px" ><i class="fa fa-space-shuttle fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>自我介紹 Self Intro</h2>
+            <div class="w3-container">
+            <h5 style="line-height: 28px">22歲的<b>交大人</b>，曾參與過微創業<b>集資百萬</b>專案、產出懶人包分享達上百次的<b>行銷策略</b>腦。<br>目前更專注<b>有設計感的網頁應用開發，以及商業、科技趨勢觀察寫作</b>。</h5><br>
+            <h4 class="w3-opacity" style="margin: 8px 0px"><b>Ｑ：為什麼要從行銷跨領域到網頁應用開發？</b></h4>
+            <h6 style="line-height: 26px">20-22歲期間，我一直都有在碰設計、前端開發、行銷；但由於專案性質和社交因素，對外公開的經驗主要是行銷。<br>
+            我分析過<b>為什麼我的某些經驗能成功，某些卻失敗，發現關鍵因素在於產出的貼文視覺及規劃上夠完整、有品質。但擺到市場性來看，我的貼文或策略不一定夠有話題性(梗)、能無時無刻勾起客群的注意力、興趣。我希望把我在品質部份的優勢發揚光大。</b>這同時也歸因於我的個性其實不喜歡特別去做某件事來吸引人注意。<br>
+            且我發現行銷的流程中，有許多未來可能「<b>被自動化</b>」的部份，包括用Python爬蟲分析社群焦點話題、文案用語、廣告投放（程序化購買）等。<b>行銷當然依舊非常重要，不過我覺得用精準的sense去操作程式、更有效率找到企業需要的市場風向，比起單憑猜測來產出內容做實驗更具意義。</b><br><br>
+            經過多次與人合作、相處的經驗，我總算夠深刻的了解到自己對人生所抱持的價值觀，原來我潛在更<b>希望把時間浪費（投資）在具開創性、前沿、有設計感的事物上。新技術、好看易用的設計、商業趨勢才是我會想要花好幾年培養的領域。</b></h6><br>
+            <h4 class="w3-opacity" style="margin: 8px 0px"><b>Ｑ：我如何補足非本科系的劣勢？</b></h4>
+            <h6 style="line-height: 26px">從大學加社團以來發現興趣落在設計、品牌行銷、程式開發、數據時，就一直努力在做這個「補足」的動作（笑）<br>
+            行銷領域的補足我能做得到，能在大學累積到下面所寫的一點點實踐經歷，起碼應該讓你對我補足程式開發、數據分析的能力更有信心了吧？:Ｐ<br>
+            <b>學一個新的語言時，我採取的方式是先到Udacity用2倍速看免費課程、爬好讀的中文文件；熟悉語法規則之後，再自創一個專案來練習</b>。譬如：做一個假動態遊戲UI介面練習排版和jQuery、寫一個(你現在所看到的)作品集練習data-filter、整合... <br><br>
+            <b>加上曾有的行銷經驗和思維，應該能使我開發出相對更具市場性的landing page、js互動，甚至UI。同時，我也相信跨領域人才會讓團隊運作的更有效率：）</b></h6>
+            </div>  
+        </div>
+
+        <div class="w3-container w3-card-2 w3-white w3-margin-bottom padding wow fadeIn" style="padding: 10px 10px" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <h2 class="w3-text-grey w3-padding-16" style="font-size: 30px" ><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>行銷/創業實踐經歷 Practical Experience</h2>
+            <div class="w3-container col-md-9">
+            <h5 class="w3-opacity" style="font-size: 20px; margin: 0px 0px 5px 0px"><b>傳播企劃部實習生　｜　<u>電通安吉斯</u>集團 安索帕 isobar</b></h5>
+            <h6 class="w3-text-teal" style="font-size: 14px"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017 - Aug 2017</h6>
+            <p><li style="padding: 0px 3px">在傳播企劃部中參與<b>Uniqlo</b>、<b>黑松沙士</b>提案討論。</li><li style="padding: 0px 3px">參與公司內部研究案，包含35歲生長歷程的社會文化趨勢、90後數位行為。</li><br><i class="fa fa-check"></i>　成果：<b>［研究報告］ 90後數位行為趨勢、［案例報告］品牌對年輕族群廣告社群操作案例</b></p>
+            </div>
+            <div class="w3-container col-md-2">
+                <img src="{% static 'images/com_logo1.png' %}" alt="">
+            </div>
+            <hr>
+            <div class="w3-container col-md-9">
+            <h5 class="w3-opacity" style="font-size: 20px; margin: 0px 0px 5px 0px"><b>專欄編輯行銷實習生　｜　<u>塔圖科技</u> (網路廣告投放公司)</b></h5>
+            <h6 class="w3-text-teal" style="font-size: 14px"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2016 - Jun 2017</h6>
+            <p><li style="padding: 0px 3px">負責「Tagtoo Southeast Asia」、「Tagtoo」粉專及網站專欄內容營運。</li><li style="padding: 0px 3px">業務形象影片拍攝與剪接，用以擴散在<b>東南亞電商社群</b>的知名度。</li><br><i class="fa fa-check"></i>　成果：6篇中英粉專懶人包操作，單篇<a href="portfolio-details-SMM1.html" target="_blank"><b>最高分享數140次、觸及破萬人</b></a>；11篇英文文章，曾獲<a href="https://e27.co/knowing-customer-well-key-success-indonesian-mobile-behaviour-20160803/" target="_blank"><b>新加坡科技媒體e27</b></a>刊出。</p>
+            </div>
+            <div class="w3-container col-md-2">
+                <img src="{% static 'images/com_logo2.png' %}" alt=""  style="margin: 50px 0px">
+            </div>
+            <hr>
+            <div class="w3-container col-md-9">
+            <h5 class="w3-opacity" style="font-size: 20px; margin: 0px 0px 5px 0px"><b>新創團隊共同創辦人　｜　<u>程式老爹</u> (程式教育桌遊)</b></h5>
+            <h6 class="w3-text-teal" style="font-size: 14px"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2016 - Jun 2017</h6>
+            <p><li style="padding: 0px 3px">負責募資圖文製作、網站架設營運、社群經營及業務接洽。</li><br><i class="fa fa-check"></i>　成果：2016年5-7月於FlyingV平台<a href="https://www.flyingv.cc/projects/12602" target="_blank"><b>集資120萬</b></a>；曾被聯合報、數位時代等<b>26家媒體報導</b>，並受邀於<b>新北市教育局論壇、雜學校亞洲教育展</b>中展出。</p>
+            </div>
+            <div class="w3-container col-md-2">
+                <img src="{% static 'images/com_logo3.png' %}" alt="" style="margin: 10px -90px">
+            </div>
+            <hr>
+            <div class="w3-container col-md-9">
+            <h5 class="w3-opacity" style="font-size: 20px; margin: 0px 0px 5px 0px"><b>行銷暨品牌管理部門 交大分會 副會長　｜　<u>AIESEC</u> 國際經濟商管學生會</b></h5>
+            <h6 class="w3-text-teal" style="font-size: 14px"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2015 - Mar 2016</h6>
+            <p><li style="padding: 0px 3px"><b>帶領14人團隊</b>，分工並規劃產品年度行銷及品牌公關策略。建立報名追蹤制度、管道開發策略與執行。</li><br><i class="fa fa-check"></i>　成果：任職期間共收到<b>逾150人次申請計畫或加入AIESEC</b>，海外實習計畫申請數較前一年<b>成長600%</b></p>
+            </div>
+            <div class="w3-container col-md-2">
+                <img src="{% static 'images/com_logo4.png' %}" alt="" style="margin: 80px 0px">
+            </div>
+            <hr>
+            <div class="w3-container col-md-9">
+            <h5 class="w3-opacity" style="font-size: 20px; margin: 0px 0px 5px 0px" ><b>校園大使　｜　<u>Google Ignite</u> 火星計畫</b></h5>
+            <h6 class="w3-text-teal" style="font-size: 14px"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2015 - Dec 2015</h6>
+            <p><li style="padding: 0px 3px">以校內網路行銷、實體說明會等管道提升火星計畫申請數。</li><br><i class="fa fa-check"></i>　成果：逾<b>300人</b>報名說明會、逾<b>200人</b>申請計畫。</p>
+            </div>
+            <div class="w3-container col-md-2">
+                <img src="{% static 'images/com_logo5.png' %}" alt="" style="margin: 40px -50px">
+            </div>
+            <hr>
+        </div>
+
+        <div class="w3-container w3-card-2 w3-white padding wow fadeIn" style="padding: 10px 10px" data-wow-duration="1000ms" data-wow-delay="600ms">
+            <h2 class="w3-text-grey w3-padding-16" style="font-size: 30px"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>教育背景 Education</h2>
+            <div class="w3-container">
+            <h5 class="w3-opacity" style="font-size: 20px; margin: 0px 0px 5px 0px"><b>Udacity, Udemy, Coursera</b></h5>
+            <h6 class="w3-text-teal" style="font-size: 14px"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Life-long</h6>
+            <p><b>Web Development, UI Design, Data Analysis</b>! 不斷更新我想精進的領域知識</p>
+            <hr>
+            </div>
+            <div class="w3-container">
+            <h5 class="w3-opacity" style="font-size: 20px; margin: 0px 0px 5px 0px"><b>國立交通大學 National Chiao Tung University</b></h5>
+            <h6 class="w3-text-teal" style="font-size: 14px"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 - 2017</h6>
+            <p>主修課程：<b>計算機概論、物件導向程式設計、Android程式設計</b>、經濟學、<b>資料庫系統管理、統計學</b>、創業與籌資、行銷學、企業競爭力分析、會計學、商業談判等</p>
+            <br>
+            </div>
+        </div>
+
+        <!-- End Right Column -->
+        </div>
+        
+    <!-- End Grid -->
+    </div>
+    
+    <!-- End Page Container -->
+    </div>
+
+    <div style="text-align: center; margin: 100px">
+        <a href="https://drive.google.com/uc?export=download&id=0B_JtxfT0wVxtTzJmckxYTzVWUmM" target="_blank" class="cv_btn" style="background-color: turquoise; color: #fff; font-size: 18px; font-weight: 500; border-radius: 4px; padding: 20px 30px">Download JiunYi's CV</a>
+    </div>
+
+    <div class="footer">
+		<div class="container">
+			<div class="col-md-4 footer-left">
+				<h4>關於站長</h4>
+				<p>22歲的行銷、軟體開發雙棲者，喜歡看偵探小說、關注互聯網新創的競爭分析：D</p>
+				<div class="fb-follow" data-href="https://www.facebook.com/Abao.JiunYiYang" data-colorscheme="dark" data-layout="standard" data-size="large" data-show-faces="true"></div>
+				<img src="{% static 'images/t4.jpg' %}" class="img-responsive" alt="">
+					<div class="bht1">
+						<a href="/aboutme.html">Know More</a>
+					</div>
+			</div>
+			<div class="col-md-4 footer-middle">
+			<h4>請認真的人喝一杯咖啡吧！</h4>	
+				<p>你的贊助，就是我寫下去的動力！</p>
+				<a href="https://p.allpay.com.tw/Lmhq5" target="_blank"><i class="fa fa-coffee" style="font-size: 40px"></i></a>
+			</div>
+			<div class="col-md-4 footer-right">
+				<h4>Subscribe to Stay Tune</h4>
+				<p>訂閱收到最新文章和免費教學資源！</p>
+						<div class="name">
+							<form id="main-contact-form" name="contact-form" action="https://formspree.io/jiunyi.yang.abao@gmail.com" method="post">
+								<input type="text" name="name" placeholder="Your Name" required="required">
+								<input type="text" name="_replyto" placeholder="Your Email" required="required">
+								<input type="submit" name="submit" value="Get Free Tutorials">
+							</form>
+						
+						</div>	
+						
+							<div class="clearfix"> </div>
+					
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<p class="toTop" style="text-align: center; font-size: 24px; margin: 10px 0px"><a href="#header"><i class="fa fa-chevron-up"></i></a></p>
+	</div>
+	
+	<div class="copyright wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+				<div class="container">
+					<p>© 2017 行銷技術控. All rights reserved | Templates from <a href="http://w3layouts.com/">W3layouts</a></p>
+				</div>
+			</div>
+    <!-- Comment #4: Plugin Code -->
+  	<div class="fb-quote"></div>
+</body>
+</html>

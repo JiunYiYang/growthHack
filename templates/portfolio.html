@@ -1,0 +1,631 @@
+{% load staticfiles %}
+{% load essays_tags %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>行銷技術控 | Marketing with Data & Web Tech</title>
+<meta name="google-site-verification" content="Ja0wk-_nuipAVZHdFOmbu-QYGFCSL7Q2VzOuwNH-kO8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Growth Hack, Data, Marketing Tech, User Acqusition, User Activate, User Retention, Referral, Revenue, 增長駭客, 行銷, 技術, 產品增長, 資料分析, 成長駭客, 行銷自動化, 程序化, 廣告, 數位廣告, 用戶增長, 用戶留存, 推荐, 轉換營收" />
+<meta property="og:url"           content="https://growthackit.pythonanywhere.com/aboutme.html" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="關於我 About Me－行銷技術控 | Marketing with Data & Web Tech" />
+<meta property="og:description"   content="動態分類的作品集" />
+<meta property="og:image"         content="{% static 'images/collections/SMM_1.jpg' %}" />
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link rel="icon" type="image/png" sizes="96x96" href="{% static 'images/favicon-96x96.png' %}">
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+<link href="{% static 'css/lightbox.css' %}" rel="stylesheet"> 
+<link href="{% static 'css/animate1.min.css' %}" rel="stylesheet"> 
+<link href="{% static 'css/main.css' %}" rel="stylesheet">
+<link href="{% static 'css/responsive.css' %}" rel="stylesheet">
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />	
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- animation-effect -->
+<link href="{% static 'css/animate.min.css' %}" rel="stylesheet"> 
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap1.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/jquery.isotope.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/lightbox.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/wow.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/main.js' %}"></script>   
+<script>
+ new WOW().init();
+</script>
+<!-- //animation-effect -->
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5611170227781133",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.6";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<header id="header" style="transition-duration: 0.5s"></header>
+<div class="header" id="ban" style="position: fixed; overflow: hidden; top: 0px; width: 100%; z-index: 2">
+		<div class="container">
+			<div class="head-left fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+				
+			</div>
+			<div class="header_right fadeInLeft animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInLeft;">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                        <nav class="link-effect-7" id="link-effect-7">
+                            {% get_categories as category_list %}
+                                <ul class="nav navbar-nav">
+                                    <li class="active act"><a style="font-size: 14px" href="/">Home</a></li>
+                                    {% for category in category_list %}
+                                    <li>
+                                        <a href="{% url 'essays:category' category.pk %}#content">{{ category.name }}</a>
+                                    </li>
+                                    {% endfor %}
+                                    <li><a style="font-size: 14px" href="/aboutme.html">About</a></li>
+                                    <li><a style="font-size: 14px" href="/portfolio.html">Portfolio</a></li>
+                                </ul>
+                        </nav>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+			</div>
+			<div class="nav navbar-nav navbar-right social-icons fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+					<ul>
+						<li><a href="https://www.facebook.com/Abao.JiunYiYang" target="_blank"> </a></li>
+						<li><a href="https://www.linkedin.com/in/jiunyiyang/" class="in" target="_blank"> </a></li>
+					</ul>
+				</div>
+			<div class="clearfix"> </div>	
+		</div>
+	</div>
+	<!--start-main-->
+	<div class="header-bottom" style="margin-bottom: 20px">
+		<div class="container">
+			<div class="logo fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s" style="position: relative">
+				<a href="/"><img src="https://vectr.com/abaoyang/welcome.png?width=570&height=600&select=dq2YncSGN" alt="行銷 技術 控 Marketing Tech"></a>
+				<div class="titleGroup" style="display: inline-block; position: absolute">
+					<h1 style="z-index: 0"><a href="/">行銷技術控</a></h1>
+					<p class="divider" style="z-index: 0">——————</p><p class="subTitle" style="z-index: 0"> Marketing with Data & Web Tech </p><p class="divider" style="z-index: 0">——————</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+    <section id="portfolio">
+        <div class="container">
+            <div class="row">
+                <ul class="portfolio-filter text-center">
+                    <li><a class="btn btn-default active" href="#" data-filter="*">All</a></li>
+                    <li><a class="btn btn-default" href="#" data-filter=".FED">FrontEnd Develop</a></li>
+                    <li><a class="btn btn-default" href="#" data-filter=".BED">BackEnd Develop</a></li>
+                    <!--<li><a class="btn btn-default" href="#" data-filter=".FSD">FullStack Develop</a></li>-->
+                    <li><a class="btn btn-default" href="#" data-filter=".InfoG">Infographics</a></li>
+                    <li><a class="btn btn-default" href="#" data-filter=".CC">Content Curation</a></li>
+                    <li><a class="btn btn-default" href="#" data-filter=".SMM">Social Media Marketing</a></li>
+                </ul><!--/#portfolio-filter-->
+                    
+                <div class="portfolio-items" style="z-index: 0">
+                    <div class="col-xs-6 col-sm-4 col-md-6 portfolio-item FED">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/FED_1.png' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-FED1.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/FED_1.png' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>仿遊戲介面的動態網頁</h2>
+                                <p>使用到CSS3動畫效果及jQuery計數</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-6 portfolio-item FED">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/FED_2.png' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-FED2.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/FED_2.png' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>即時購物清單</h2>
+                                <p>使用到JSON資料及jQuery</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-6 portfolio-item FED">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/FED_3.png' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-FED3.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/FED_3.png' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>全CSS靜態名片</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-6 portfolio-item FED">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/FED_4.png' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-FED4.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/FED_4.png' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>網頁內嵌多地標地圖</h2>
+                                <p>使用到Google Maps javascript API、Marker與array概念</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-6 portfolio-item BED">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/BED_1.png' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://calm-everglades-69191.herokuapp.com/" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/BED_1.png' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>含會員註冊功能的報名&留言&發文網站</h2>
+                                <p>使用Ruby on Rails(MVC架構)，前端套用Bootstrap，可註冊、登入/登出、區分會員的報名/發文/留言</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-6 portfolio-item BED">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/coming-soon-bg.png' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item SMM" style="margin-bottom: 10px">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/SMM_1.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-SMM1.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/SMM_1.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>電商模式懶人包貼文 | 146次分享</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item SMM">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/SMM_2.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-SMM2.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/SMM_2.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>新零售解說懶人包貼文 | 68次分享</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item SMM">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/SMM_3.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-SMM3.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/SMM_3.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>廣告投放教戰懶人包貼文 | 51次分享</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item InfoG">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/InfoG_1.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/blogdetails-InfoG1.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/InfoG_1.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>[懶人包] 三種電商模式，一次滿足</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item InfoG">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/InfoG_2.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/blogdetails-InfoG2.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/InfoG_2.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>[懶人包] 新零售葫蘆裡賣什麼藥？</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item InfoG" style="margin-bottom: 80px">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/InfoG_3.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/blogdetails-InfoG3.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/InfoG_3.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>[懶人包] 廣告投放初階教戰！</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item SMM">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/SMM_4.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-SMM4.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/SMM_4.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>高觸及影片截圖留言抽獎 | 279次互動</h2>
+                                <p>首屆交大藝趣節(藝術季)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item SMM">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/SMM_55.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-SMM5.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/SMM_55.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>破格右三欄圖冊留言回饋 | 296次互動</h2>
+                                <p>(教育新創) 程式老爹Papacode</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item SMM" style="margin-bottom: 250px">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/SMM_66.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/portfolio-details-SMM6.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/SMM_66.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>贊助者共鳴貼文 | 126次互動</h2>
+                                <p>(教育新創) 程式老爹Papacode</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item InfoG">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="{% static 'images/collections/InfoG_4.jpg' %}" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://a-baoyang.github.io/Public_Collections/blogdetails-InfoG4.html" target="_blank"><i class="fa fa-link"></i></a></li>
+                                        <li><a href="{% static 'images/collections/InfoG_4.jpg' %}" data-lightbox="example-set"><i class="fa fa-eye"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info">
+                                <h2>[數據圖表] 東南亞行動裝置使用行為（英）</h2>
+                                <p>【Weekly Column】Knowing Your Customer Well is the Key to Success：Southeast Asia Mobile Behavior | 塔圖廣告實習編輯</p>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item CC">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="https://scontent.ftpe8-4.fna.fbcdn.net/v/t31.0-8/18055802_1446674962050048_771246513594599596_o.jpg?oh=ec9d4c9469f621b2812c52f3a5e00d2d&oe=5A45E935" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://www.facebook.com/notes/tagtoo/tagtoo-x-facebook2017-%E8%87%89%E6%9B%B8%E5%BB%A3%E5%91%8A%E6%9C%80%E6%96%B0%E8%B6%A8%E5%8B%A2full-funnel-solution-tagtoo-dpa-creative/1666820176680501/" target="_blank"><i class="fa fa-link"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>【Tagtoo x Facebook】2017 臉書廣告最新趨勢：Full Funnel Solution & Tagtoo DPA Creative</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item CC">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="https://scontent.ftpe8-4.fna.fbcdn.net/v/t31.0-0/p600x600/14706926_1379271135431200_4967379152829310923_o.jpg?oh=5d032acfd00fd07c0bf014e18dc34213&oe=5A47C4D9" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://www.facebook.com/notes/%E6%A5%8A%E9%88%9E%E5%AE%9C/%E8%AA%B2%E5%A0%82%E7%AD%86%E8%A8%98%E6%9B%BE%E7%B6%93%E5%96%AE%E6%9C%8850%E8%90%AC%E7%80%8F%E8%A6%BD%E9%87%8F%E7%9A%84%E8%B2%A0%E8%A9%95%E7%B6%B2%E5%BE%8C%E4%BE%86%E6%80%8E%E9%BA%BC%E4%BA%86%E6%96%87%E6%9C%AB%E6%9C%89%E9%9B%B7/1379019475456366/" target="_blank"><i class="fa fa-link"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>【課堂筆記】曾經單月50萬瀏覽量的負評網，後來怎麼了？（文末有雷）</h2>
+                                <p>自產案例分析</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item CC">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="https://scontent.ftpe8-4.fna.fbcdn.net/v/t31.0-0/p600x600/13914033_1891024271125256_6046034766704691717_o.jpg?oh=63a86ac065cb9798de36610347afddea&oe=5A137BD5" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://e27.co/will-grab-like-ceo-anthony-tan-said-make-uber-lose-sea-20160808/" target="_blank"><i class="fa fa-link"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>【Weekly Column】Will Grab, like CEO Anthony said, make Uber lose again in SEA?</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item CC">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="https://scontent.ftpe8-4.fna.fbcdn.net/v/t31.0-8/13923593_1892863250941358_3832967242474789082_o.jpg?oh=eff9dd4f960ef7d0c567e3d174594abc&oe=5A1B7A6F" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://e27.co/may-ubers-next-core-business-earn-steady-profit-20160817/" target="_blank"><i class="fa fa-link"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>【Weekly Column】What may be Uber’s next core business to earn steady profit?</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item CC">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="https://scontent.ftpe8-4.fna.fbcdn.net/v/t31.0-8/14231301_1904913109736372_7118089089523416776_o.jpg?oh=951e68316365826cee06568bfa83b6ec&oe=5A122974" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://www.facebook.com/notes/tagtoo/weekly-columnlogistics-evolution-you-must-know-in-southeast-asia/1904899989737684/" target="_blank"><i class="fa fa-link"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>【Weekly Column】Logistics Evolution You Must Know in Southeast Asia</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item CC">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="https://scontent.ftpe8-4.fna.fbcdn.net/v/t31.0-8/14633143_1935949613299388_1330390999695156879_o.jpg?oh=a3d0df2acfe8837e16001523fc205ab7&oe=5A43C903" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://www.facebook.com/notes/tagtoo/weekly-column5-tips-to-start-your-ecommerce-business/1935944506633232/" target="_blank"><i class="fa fa-link"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>【Weekly Column】5 Tips to Start Your Ecommerce Business</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item CC">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="https://scontent.ftpe8-4.fna.fbcdn.net/v/t31.0-8/15626461_1970905639803785_8023799088545801511_o.jpg?oh=41df2c7b7f21973cca79c81a1845364c&oe=5A5E4AEE" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://www.facebook.com/notes/tagtoo/the-rise-of-mobile-tech-brings-transportation-evolution-go-jek-in-indonesia/1970897596471256/" target="_blank"><i class="fa fa-link"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>【Weekly Column】The Rise of Mobile Tech Brings Transportation Evolution: Go-Jek in Indonesia</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-md-4 portfolio-item CC">
+                        <div class="portfolio-wrapper">
+                            <div class="portfolio-single">
+                                <div class="portfolio-thumb">
+                                    <img src="https://scontent.ftpe8-4.fna.fbcdn.net/v/t31.0-8/15994452_1979391362288546_3292541437719704187_o.jpg?oh=f0bb81638a9b5b887a6b4fd627d91f67&oe=5A467613" class="img-responsive" alt="">
+                                </div>
+                                <div class="portfolio-view">
+                                    <ul class="nav nav-pills">
+                                        <li><a href="https://www.facebook.com/notes/tagtoo/e-commerce-beginners-guidewoocommerce-vs-shopifywhich-is-better-to-build-your-ow/1979374575623558/" target="_blank"><i class="fa fa-link"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="portfolio-info ">
+                                <h2>【E-commerce Beginners Guide】WooCommerce vs. Shopify：Which is Better to Build Your Own Online Store?</h2>
+                                <p>塔圖廣告實習編輯</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--/#portfolio-->
+    <hr>
+
+    <div class="footer">
+		<div class="container">
+			<div class="col-md-4 footer-left">
+				<h4>關於站長</h4>
+				<p>22歲的行銷、軟體開發雙棲者，喜歡看偵探小說、關注互聯網新創的競爭分析：D</p>
+				<div class="fb-follow" data-href="https://www.facebook.com/Abao.JiunYiYang" data-colorscheme="dark" data-layout="standard" data-size="large" data-show-faces="true"></div>
+				<img src="{% static 'images/t4.jpg' %}" class="img-responsive" alt="">
+					<div class="bht1">
+						<a href="/aboutme.html">Know More</a>
+					</div>
+			</div>
+			<div class="col-md-4 footer-middle">
+			<h4>請認真的人喝一杯咖啡吧！</h4>	
+				<p>你的贊助，就是我寫下去的動力！</p>
+				<a href="https://p.allpay.com.tw/Lmhq5" target="_blank"><i class="fa fa-coffee" style="font-size: 40px"></i></a>
+			</div>
+			<div class="col-md-4 footer-right">
+				<h4>Subscribe to Stay Tune</h4>
+				<p>訂閱收到最新文章和免費教學資源！</p>
+						<div class="name">
+							<form id="main-contact-form" name="contact-form" action="https://formspree.io/jiunyi.yang.abao@gmail.com" method="post">
+								<input type="text" name="name" placeholder="Your Name" required="required">
+								<input type="text" name="_replyto" placeholder="Your Email" required="required">
+								<input type="submit" name="submit" value="Get Free Tutorials">
+							</form>
+						
+						</div>	
+						
+							<div class="clearfix"> </div>
+					
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<p class="toTop" style="text-align: center; font-size: 24px; margin: 10px 0px"><a href="#header"><i class="fa fa-chevron-up"></i></a></p>
+	</div>
+	
+	<div class="copyright wow fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s">
+				<div class="container">
+					<p>© 2017 行銷技術控. All rights reserved | Templates from <a href="http://w3layouts.com/">W3layouts</a></p>
+				</div>
+			</div>
+    <!-- Comment #4: Plugin Code -->
+  	<div class="fb-quote"></div>
+</body>
+</html>

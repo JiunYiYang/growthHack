@@ -1,0 +1,276 @@
+{% load staticfiles %}
+{% load essays_tags %}
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>行銷技術控 | Marketing with Data & Web Tech</title>
+<meta name="google-site-verification" content="Ja0wk-_nuipAVZHdFOmbu-QYGFCSL7Q2VzOuwNH-kO8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Growth Hack, Data, Marketing Tech, User Acqusition, User Activate, User Retention, Referral, Revenue, 增長駭客, 行銷, 技術, 產品增長, 資料分析, 成長駭客, 行銷自動化, 程序化, 廣告, 數位廣告, 用戶增長, 用戶留存, 推荐, 轉換營收" />
+<meta property="og:url"           content="https://growthackit.pythonanywhere.com/post/{{ post.get_absolute_url }}/" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="{{ post.title }}－行銷技術控 | Marketing with Data & Web Tech" />
+<meta property="og:description"   content="{{ post.content}}" />
+<meta property="og:image"         content="{{ post.photo }}" />
+<script type="applijewelleryion/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link rel="icon" type="image/png" sizes="96x96" href="{% static 'images/favicon-96x96.png' %}">
+<link href="{% static 'css/bootstrap.css' %}" rel='stylesheet' type='text/css' />
+<!-- Custom Theme files -->
+<link href='https://fonts.googleapis.com/css?family=Raleway:400,600,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+<link href="{% static 'css/style.css' %}" rel='stylesheet' type='text/css' />	
+<script src="{% static 'js/jquery-1.11.1.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<!-- MailMunch for Growthackit -->
+<!-- Paste this code right before the </head> tag on every page of your site. -->
+<script src="//a.mailmunch.co/app/v1/site.js" id="mailmunch-script" data-mailmunch-site-id="426223" async="async"></script>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-5611170227781133",
+    enable_page_level_ads: true
+  });
+</script>
+</head>
+<body>
+<!-- Comment #2: SDK -->
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v2.6";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<header id="header"></header>
+<div class="header" id="ban" style="position: fixed; overflow: hidden; top: 0px; width: 100%; z-index: 1">
+		<div class="container">
+			<div class="head-left">
+				<!--<div class="header-search">
+						<div class="search">
+							<input class="search_box" type="checkbox" id="search_box">
+							<label class="icon-search" for="search_box"><i class="fa fa-search" aria-hidden="true"></i></label>
+							<div class="search_form">
+								<form action="#" method="post">
+									<input type="text" name="Search" placeholder="Search...">
+									<input type="submit" value="Send">
+								</form>
+							</div>
+						</div>
+				</div>-->
+			</div>
+			<div class="header_right">
+			<nav class="navbar navbar-default">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+					<nav class="link-effect-7" id="link-effect-7">
+						{% get_categories as category_list %}
+							<ul class="nav navbar-nav">
+								<li><a style="font-size: 14px" href="/">Home</a></li>
+								{% for category in category_list %}
+								<li>
+									<a href="{% url 'essays:category' category.pk %}#content">{{ category.name }}</a>
+								</li>
+								{% endfor %}
+								<li><a style="font-size: 14px" href="/aboutme.html">About</a></li>
+                                <li><a style="font-size: 14px" href="/portfolio.html">Portfolio</a></li>
+							</ul>
+					</nav>
+				</div>
+				<!-- /.navbar-collapse -->
+			</nav>
+			</div>
+			<div class="nav navbar-nav navbar-right social-icons wow fadeInRight animated animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: fadeInRight;">
+					<ul>
+						<li><a href="https://www.facebook.com/Abao.JiunYiYang" target="_blank"> </a></li>
+						<li><a href="https://www.linkedin.com/in/jiunyiyang/" class="in" target="_blank"> </a></li>
+					</ul>
+				</div>
+			<div class="clearfix"> </div>	
+		</div>
+	</div>
+	<!--start-main-->
+	<div class="header-bottom" style="margin-top: 100px; margin-bottom: 20px">
+		<div class="container">
+			<div class="logo fadeInDown"  data-wow-duration=".8s" data-wow-delay=".2s" style="position: relative">
+				<a href="/"><img src="https://vectr.com/abaoyang/welcome.png?width=570&height=600&select=dq2YncSGN" alt="行銷 技術 控 Marketing Tech"></a>
+				<div class="titleGroup" style="display: inline-block; position: absolute">
+					<h1 style="z-index: 0"><a href="/">行銷技術控</a></h1>
+					<p class="divider" style="z-index: 0">——————</p><p class="subTitle" style="z-index: 0"> Marketing with Data & Web Tech </p><p class="divider" style="z-index: 0">——————</p>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- banner -->
+
+<div class="banner-1">
+
+</div>
+
+	<!-- technology-left -->
+	<div class="technology">
+	<div class="container" id="content">
+		<div class="col-md-12">
+			<div class="agileinfo">
+			<div class="single">
+				<h3 class="top">{{ post.title }}</h3>
+				<img src="{{ post.photo }}" class="img-responsive" alt="" width="100%">
+			    <div class="b-bottom"> 
+					<p>By {{ post.author }} On {{ post.created_at }}　
+					<p class="sub">{{ post.content | safe }}</p>
+					<br>
+				   
+					<p>By {{ post.author }} On {{ post.created_at }}　 <a class="span_link" href="#"><i class="fa fa-hdd-o"></i> {{ post.category.name }} 　</a><a class="span_link" href="#"><i class="fa fa-comment"></i> 0 　</a><a class="span_link" href="#"><i class="fa fa-eye"></i> {{ post.views }} 　</a></p>
+					<i>photo source: <a href="{{ post.photo }}">{{ post.photo }}</a></i>
+					
+					<div><br></div>
+					<!-- AddToAny BEGIN -->
+					<div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+					<a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+					<a class="a2a_button_facebook"></a>
+					<a class="a2a_button_linkedin"></a>
+					<a class="a2a_button_google_plus"></a>
+					<a class="a2a_button_wordpress"></a>
+					<a class="a2a_button_email"></a>
+					<div class="fb-send" 
+						data-href="https://growthackit.pythonanywhere.com/post/{{ post.get_absolute_url }}/" 
+						data-layout="button_count">
+					</div>
+					</div>
+					<!-- Your send button code -->
+					
+					<script async src="https://static.addtoany.com/menu/page.js"></script>
+					<!-- AddToAny END -->
+					<hr>
+					<div class='mailmunch-forms-widget-551951'></div>
+				</div>
+				
+			 </div>
+			  
+				<div class="response">
+					<hr>
+					<div id="disqus_thread"></div>
+						<script>
+
+						/**
+						*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+						*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+						
+						var disqus_config = function () {
+						this.page.url = 'https://growthackit.pythonanywhere.com/post/{{ post.get_absolute_url }}/';  // Replace PAGE_URL with your page's canonical URL variable
+						this.page.identifier = '/{{ post.get_absolute_url }}/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+						};
+						
+						(function() { // DON'T EDIT BELOW THIS LINE
+						var d = document, s = d.createElement('script');
+						s.src = 'https://growthackit.disqus.com/embed.js';
+						s.setAttribute('data-timestamp', +new Date());
+						(d.head || d.body).appendChild(s);
+						})();
+						</script>
+						<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                            
+					<!--<h3>留言列表：</h3>
+					<div class="media response-info">
+						{% for comment in comment_list %}
+						<div class="media-body">
+							<span class="nickname"><a href="{{ comment.url }}">{{ comment.name }}</a> 於　</span><span> {{ comment.created_at }} 發表：</span>
+							<h5>　<i>{{ comment.text }}</i></h5>
+						</div>
+						{% empty %}
+						<i>｜就等你來發表頭香觀點！</i>
+						{% endfor %}
+						<hr>
+						<div class="clearfix"> </div>
+					</div>
+					<h4>你怎麼看？</h4>
+					<form action="{% url 'comments:post_comment' post.pk %}" method="post" class="coment-form">
+						{% csrf_token %}
+						<div class="row">
+							<div class="col-md-4">
+							<label for="{{ form.name.id_for_label }}">小名：</label>
+							{{ form.name }}
+							{{ form.name.errors }}
+							</div>
+							<div class="col-md-4">
+							<label for="{{ form.email.id_for_label }}">信箱：</label>
+							{{ form.email }}
+							{{ form.email.errors }}
+							</div>
+							<div class="col-md-4">
+							<label for="{{ form.url.id_for_label }}">個人網站/FB link：</label>
+							{{ form.url }}
+							{{ form.url.errors }}
+							</div>
+							<div class="col-md-12">
+							<label for="{{ form.text.id_for_label }}">您的看法：</label>
+							{{ form.text }}
+							{{ form.text.errors }}
+							<button type="submit" class="comment-btn">發表</button>
+							</div>-->
+						<!--</div>    -->
+						<!-- row -->
+					<!--</form>-->
+				</div>
+			</div>
+		</div>
+		<!-- technology-right -->
+		
+	</div>
+</div>
+<div class="footer">
+		<div class="container">
+			<div class="col-md-4 footer-left">
+				<h4>關於站長</h4>
+				<p>22歲的行銷、軟體開發雙棲者，喜歡看偵探小說、關注互聯網新創的競爭分析：D</p>
+				<div class="fb-follow" data-href="https://www.facebook.com/Abao.JiunYiYang" data-colorscheme="dark" data-layout="standard" data-size="large" data-show-faces="true"></div>
+				<img src="{% static 'images/t4.jpg' %}" class="img-responsive" alt="">
+					<div class="bht1">
+						<a href="/aboutme.html">Know More</a>
+					</div>
+			</div>
+			<div class="col-md-4 footer-middle">
+			<h4>請認真的人喝一杯咖啡吧！</h4>	
+				<p>你的贊助，就是我寫下去的動力！</p>
+				<a href="https://p.allpay.com.tw/Lmhq5" target="_blank"><i class="fa fa-coffee" style="font-size: 40px"></i></a>
+			</div>
+			<div class="col-md-4 footer-right">
+				<h4>Subscribe to Stay Tune</h4>
+				<p>訂閱收到最新文章和免費教學資源！</p>
+						<div class="name">
+							<form id="main-contact-form" name="contact-form" action="https://formspree.io/jiunyi.yang.abao@gmail.com" method="post">
+								<input type="text" name="name" placeholder="Your Name" required="required">
+								<input type="text" name="_replyto" placeholder="Your Email" required="required">
+								<input type="submit" name="submit" value="Get Free Tutorials">
+							</form>
+						
+						</div>	
+						
+							<div class="clearfix"> </div>
+					
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<p class="toTop" style="text-align: center; font-size: 24px; margin: 10px 0px"><a href="#header"><i class="fa fa-chevron-up"></i></a></p>
+	</div>
+	<div class="copyright">
+				<div class="container">
+					<p>© 2017 行銷技術控. All rights reserved | Templates from <a href="http://w3layouts.com/">W3layouts</a></p>
+				</div>
+			</div>
+	<!-- Comment #4: Plugin Code -->
+  	<div class="fb-quote"></div>
+</body>
+</html>

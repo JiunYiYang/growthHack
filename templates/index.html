@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block main %}
+	{% for post in post_list %}
+		<div class="tch-img">
+			<a href="{{ post.get_absolute_url }}#content"><img src="{{ post.photo }}" class="img-responsive" alt=""></a>
+		</div>
+		<h3><a href="{{ post.get_absolute_url }}#content">{{ post.title }}</a></h3>
+		<h6>BY <a href="#">{{ post.author }} </a>{{ post.created_at }} <a href="{{ post.get_absolute_url }}#content"><i class="fa fa-eye"></i> {{ post.views }}　</a><a href="#"><i class="fa fa-facebook"></i> 0次</a></h6>
+			<p>{{ post.excerpt }}</p>
+			<div class="bht1">
+				<a href="{{ post.get_absolute_url }}#content">Continue Reading</a>
+			</div>
+			<!--<div class="soci">
+				<ul>
+					<li class="hvr-rectangle-out"><a class="fb" href="#"></a></li>
+					<li class="hvr-rectangle-out"><a class="twit" href="#"></a></li>
+					<li class="hvr-rectangle-out"><a class="goog" href="#"></a></li>
+					<li class="hvr-rectangle-out"><a class="pin" href="#"></a></li>
+					<li class="hvr-rectangle-out"><a class="drib" href="#"></a></li>
+				</ul>
+			</div>-->
+			<div class="clearfix"></div>
+			<hr>
+	{% endfor %}
+{% endblock main %}
