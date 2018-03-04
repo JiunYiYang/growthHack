@@ -30,7 +30,7 @@ input[type="button"],input[type="submit"],li.parallelogram{
 h1,h2,h3,h4,h5,h6{
 	margin:0;
      font-family: 'Raleway', 'Microsoft JhengHei', sans-serif;
-}	
+}
 p{
 	margin:0;
 	font-family: 'Raleway', 'Microsoft JhengHei', sans-serif;
@@ -325,7 +325,7 @@ label.on{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     width: auto;
     height: 100%;
     opacity: 0.3;
@@ -335,7 +335,7 @@ label.on{
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     width: 100%;
     height: auto;
     opacity: 0.3;
@@ -506,16 +506,16 @@ i.glyphicon.glyphicon-comment {
     padding: 2em 2em;
     margin-bottom: 1em;
 }
-.bht1 a{
+.bht1 a, .bht2-medium a {
     background: #1BD2C0;
     padding: 0.3em 1.8em;
-	display:inline-block;
+		display:inline-block;
     color: #fff;
 }
-.bht1 a:hover{
+.bht1 a:hover, .bht2bht2-medium a:hover {
     background: #000;
 }
-.bht1 {
+.bht1, .bht2-medium {
     float: left;
     padding-top: 1em;
 }
@@ -545,7 +545,7 @@ i.glyphicon.glyphicon-comment {
 	overflow:hidden;
 	height:32px;
 }
-.soci  ul li a{	
+.soci  ul li a{
     width: 32px;
     height: 32px;
     display: inline-block;
@@ -729,7 +729,7 @@ i.glyphicon.glyphicon-comment {
   font-family: 'Open Sans', sans-serif;
 }
 .name form input[type="submit"] {
-  background:#1BD2C0; 
+  background:#1BD2C0;
   padding: 10px 0;
   color: #fff;
   font-size: 14px;
@@ -1534,7 +1534,7 @@ p.reply i{
 	border-radius:50%;
 	-web-kit-border-radius:50%;
 	-o-border-radius:50%;
-	-ms-border-radius:50%;	
+	-ms-border-radius:50%;
 }
 .client-message {
 	float:left;
@@ -1751,7 +1751,7 @@ span.glyphicon.glyphicon-comment, span.glyphicon.glyphicon-eye-open, span.glyphi
     margin: 2em 0 0;
 }
 .paging{
-	margin:3em 0 0; 
+	margin:3em 0 0;
 }
 .blog-grids1 {
     margin-top: 3em;
@@ -2367,7 +2367,7 @@ body {
 }
 .banner h2 {
     font-size: 1em;
-	
+
 }
 .banner {
     padding: 4em 0 0;
